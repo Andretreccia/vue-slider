@@ -25,10 +25,11 @@
                 </div>
     
                 <div class="matriosca">
-                    <button @click="imgUp" class="btn_top"><i class="fas fa-chevron-up"></i></button>
-                    <button @click="imgDown" class="btn_bottom"><i class="fas fa-chevron-down"></i></button>
+                    <button @click="imgDown" class="btn_top"><i class="fas fa-chevron-up"></i></button>
+                    <button @click="imgUp" class="btn_bottom"><i class="fas fa-chevron-down"></i></button>
                     <div class="containerRight">
-                    <img class="imageList" :src="image.items" alt="" v-for="image in images">
+                    <img class="imageList opacity" :src="image.items" alt="" v-for="(image, index) in images" v-if="counter != index">
+                    <img class="imageList" :src="image.items" alt="" v-else>
                 </div>
                 </div>
             </div>

@@ -62,8 +62,11 @@
     display: flex;
     flex-direction: column;
     height: 100px;
+    
 }
-
+.opacity{
+    opacity: 0.5;
+}
 .imgSelectedSmall{
     opacity: 1;
     border: 3px solid white;
