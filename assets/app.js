@@ -32,5 +32,17 @@ const app = new Vue({
         ],
         counter: 0,
     },
+    methods: {
+        imgUp: function () {
+            if (this.counter < this.images.length - 1) {
+                ++this.counter
+            }
 
+        },
+        imgDown: function () {
+            if (this.counter > 0) {
+                --this.counter
+            }
+        }
+    }
 })
