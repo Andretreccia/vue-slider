@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Document</title>
-</head>
-<body>
-<div id="root">
-<div class="container">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=scrf, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+        <link rel="stylesheet" href="assets/style.css">
+        <title>vuejs</title>
+    </head>
+    <body class="flex debug">
+        <div id="root">
             
-            <div class="containerLeft">
-                <!-- <div class="selected">
-                    <img class="bigImage" src="./img/03.jpg" alt="">
-                    <div class="etichetta">
-                        <h2>sdkfljal;sd</h2>
-                        <p>asdjflasjdfl;asjdfl;asjdfl;kasdjsadjflasdjl;sdkjfsadlkfj</p>
-                    </div>
-                </div> -->
-            </div>
-
-            <div class="matriosca">
-
-                <!-- <button class="btn_top"><i class="fas fa-chevron-up"></i></button>
-                <button class="btn_bottom"><i class="fas fa-chevron-down"></i></button> -->
-                <div class="containerRight" >
-                <img v-for="image in images" class="side_image" :src="image.items" alt="">
-
-            </div>
+            <!-- Contenitore -->
+            <div class="container">
+                
+                <div class="containerLeft">
+                    <div class="selected">
+                        <div class="etichetta">
+                          <h2>{{images[counter].title}}</h2>
+                            <p>{{images[counter].text}}</p>
+                        </div>
+                        <img class="bigImage" :src="images[counter].items" alt="">
+                     </div>
+                </div>
+    
+                <div class="matriosca">
+                    <button class="btn_top"><i class="fas fa-chevron-up"></i></button>
+                    <button class="btn_bottom"><i class="fas fa-chevron-down"></i></button>
+                    <div class="containerRight">
+                    <img class="imageList" :src="image.items" alt="" v-for="image in images">
+                </div>
+                </div>
             </div>
         </div>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="./assets/app.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="./assets/app.js"></script>
+    </body>
 </html>

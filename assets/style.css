@@ -1,7 +1,12 @@
+/* Common */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+/* debug  */
+.debug .container{   
+    margin-top: 3rem;
 }
 
 /* Utilities */
@@ -33,7 +38,7 @@
     height: 100%;
     width: 1000px;   
     background: darkkhaki;
-    display: none;
+    display: block;
     position: relative;
     overflow: hidden;
 }
@@ -58,9 +63,7 @@
     flex-direction: column;
     height: 100px;
 }
-.sideImage{
-    opacity: 0.5;
-}
+
 .imgSelectedSmall{
     opacity: 1;
     border: 3px solid white;
@@ -68,6 +71,7 @@
 .sideImage{
   max-height: 100%;
   max-width: 100%;
+  opacity: 0.5;
 }
 
 /* bottoni */
