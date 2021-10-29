@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Utilities */
+
+.flex{
+    display: flex;
+}
+
+/* container */
+.container{
+    margin: auto; 
+    display: flex;
+}
+.containerRight{
+    display: flex;
+    flex-direction: column;
+    height: 86px;
+    position: relative;
+}
+.containerLeft{
+    height: 430px;
+}
+.matriosca{
+    position: relative;
+}
+/* immagine grande */
+
+.selected{
+    height: 100%;
+    width: 1000px;   
+    background: darkkhaki;
+    display: none;
+    position: relative;
+    overflow: hidden;
+}
+.imgSelectedBig{
+    display: block;
+}
+.bigImage{
+     width: 100%;
+     object-fit: cover;
+}
+.etichetta{
+        position: absolute;
+    color: white;
+    right: 40px;
+    bottom: 26px;
+    text-align: end;
+}
+
+/* lista immagini */
+.imageList{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+.sideImage{
+    opacity: 0.5;
+}
+.imgSelectedSmall{
+    opacity: 1;
+    border: 3px solid white;
+}
+.sideImage{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* bottoni */
+
+.btn_top{
+    position: absolute;
+    top: 5px;
+    right: 42%;
+    z-index: 324234;
+    border-radius: 50%;
+    padding: 0px 4px;
+    font-size: 29px;
+    background: rgba(233, 233, 233, 0.9);
+
+}
+.btn_bottom{
+    position: absolute;
+    bottom: 5px;
+    right: 42%;
+    padding: 0px 4px;
+    border-radius: 50%;
+    font-size: 29px;
+    background: rgba(233, 233, 233, 0.9);
+    z-index: 324234;
+}
