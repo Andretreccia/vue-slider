@@ -37,12 +37,21 @@ const app = new Vue({
             if (this.counter < this.images.length - 1) {
                 ++this.counter
             }
+            else {
+                this.counter = 0
+            }
 
         },
         imgDown: function () {
             if (this.counter > 0) {
                 --this.counter
             }
+            else {
+                this.counter = this.images.length - 1
+            }
         }
+    },
+    mounted() {
+        setInterval(this.imgUp, 3000)
     }
 })

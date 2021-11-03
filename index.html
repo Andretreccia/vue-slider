@@ -4,33 +4,48 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=scrf, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
         <link rel="stylesheet" href="assets/style.css">
         <title>vuejs</title>
     </head>
     <body class="flex debug">
         <div id="root">
-            
+
             <!-- Contenitore -->
             <div class="container">
-                
+
                 <div class="containerLeft">
                     <div class="selected">
                         <div class="etichetta">
-                          <h2>{{images[counter].title}}</h2>
+                            <h2>{{images[counter].title}}</h2>
                             <p>{{images[counter].text}}</p>
                         </div>
-                        <img class="bigImage" :src="images[counter].items" alt="">
-                     </div>
+                        <img class="bigImage" :src="images[counter].items"
+                            alt="">
+                    </div>
                 </div>
-    
+
                 <div class="matriosca">
-                    <button @click="imgDown" class="btn_top"><i class="fas fa-chevron-up"></i></button>
-                    <button @click="imgUp" class="btn_bottom"><i class="fas fa-chevron-down"></i></button>
+                    <button @click="imgDown" class="btn_top"><i class="fas
+                            fa-chevron-up"></i></button>
+                    <button @click="imgUp" class="btn_bottom"><i class="fas
+                            fa-chevron-down"></i></button>
                     <div class="containerRight">
-                    <img class="imageList opacity" :src="image.items" alt="" v-for="(image, index) in images" v-if="counter != index">
-                    <img class="imageList" :src="image.items" alt="" v-else>
-                </div>
+                        <!-- <img class="imageList opacity" :src="image.items" alt=""
+                            v-for="(image, index) in images" v-if="counter !=
+                            index"> -->
+                            <!-- <img class="imageList" :src="image.items" alt="" v-else> -->
+                            <img
+                                class="imageList"
+                                :class="counter != index ? 'opacity' : ''"
+                                :src="image.items"
+                                alt=""
+                                v-for="(image, index) in images"/>
+
+
+                    </div>
+
                 </div>
             </div>
         </div>
